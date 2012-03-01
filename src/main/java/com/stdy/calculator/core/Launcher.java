@@ -30,38 +30,7 @@ public class Launcher {
 
         /*
 
-        try {
 
-            String inputString;
-            FileReader reader = new FileReader("calculator/input.txt");
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            inputString =  bufferedReader.readLine();
-            reader.close();
-
-            System.out.println("Input string: " + inputString);
-
-            LexParser lexParser = new LexParser();
-
-            lexParser.parse(inputString);
-
-            System.out.println("Input Tokens: " + lexParser.getTokens());
-
-            RPNmaker rpn = new RPNmaker();
-
-            rpn.compose(lexParser.getTokens());
-
-            System.out.println("RPN: " + rpn.getTokens());
-            
-            Calculator calculator = new Calculator();
-            String result = calculator.calculate(rpn.getTokens());
-
-            System.out.println("Result: " + result);
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
 */
     }
