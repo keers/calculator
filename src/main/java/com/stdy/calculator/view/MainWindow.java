@@ -1,5 +1,6 @@
 package com.stdy.calculator.view;
 
+import com.stdy.calculator.core.CalculateTask;
 import com.stdy.calculator.core.Calculator;
 import com.stdy.calculator.core.LexParser;
 import com.stdy.calculator.core.RPNmaker;
@@ -56,6 +57,8 @@ public class MainWindow extends JFrame implements ActionListener {
 
         add(panel);
 
+        System.out.println("SwingUtilities.isEventDispatchThread(): " + SwingUtilities.isEventDispatchThread());
+
 
         pack();
         setVisible(true);
@@ -63,31 +66,13 @@ public class MainWindow extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
+
         if (GO_BUTTON.equals(actionEvent.getActionCommand())) {
             String expression = expressionField.getText();
 
+            CalculateTask calculateTask = new CalculateTask(expression, resultField);
 
-            System.out.println("Input string: " + expression);
-
-            LexParser lexParser = new LexParser();
-
-            lexParser.parse(expression);
-
-            System.out.println("Input Tokens: " + lexParser.getTokens());
-
-            RPNmaker rpn = new RPNmaker();
-
-            rpn.compose(lexParser.getTokens());
-
-            System.out.println("RPN: " + rpn.getTokens());
-
-            Calculator calculator = new Calculator();
-            String result = calculator.calculate(rpn.getTokens());
-
-            System.out.println("Result: " + result);
-
-            resultField.setText(result);
-
+            calculateTask.execute();
         } else if (EXIT_BUTTON.equals(actionEvent.getActionCommand())) {
             System.exit(0);
         }
