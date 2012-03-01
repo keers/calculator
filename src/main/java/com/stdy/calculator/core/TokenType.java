@@ -1,4 +1,4 @@
-package com.iron.man;
+package com.stdy.calculator.core;
 
 /**
  * Created by IntelliJ IDEA.

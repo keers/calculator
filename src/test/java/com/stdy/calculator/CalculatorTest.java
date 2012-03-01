@@ -1,5 +1,9 @@
-package com.iron.man;
+package com.stdy.calculator;
 
+import com.stdy.calculator.core.Calculator;
+import com.stdy.calculator.core.LexParser;
+import com.stdy.calculator.core.RPNmaker;
+import com.stdy.calculator.core.Token;
 import org.junit.Assert;
 import org.junit.Test;
 

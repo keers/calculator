@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.iron.man.CalculatorTest
+Test set: com.stdy.calculator.CalculatorTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
